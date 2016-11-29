@@ -11,6 +11,7 @@
         android:id="@+id/image_list_fragment"
         android:layout_weight="25">
     </fragment>
+
     <fragment
         android:name="org.androidtown.ui.fragment.SampleViewerFragment"
         android:layout_width="0dp"

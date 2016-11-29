@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class SampleListFragment extends ListFragment {
+
 	private int index = 0;
 	private ListItemSelectedListener selectedListener;
 
@@ -18,8 +19,7 @@ public class SampleListFragment extends ListFragment {
 
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		setListAdapter(ArrayAdapter.createFromResource(getActivity(),
-				R.array.image_titles, android.R.layout.simple_list_item_1));
+		setListAdapter( ArrayAdapter.createFromResource(getActivity(), R.array.image_titles, android.R.layout.simple_list_item_1) );
 		if (savedInstanceState != null) {
 			index = savedInstanceState.getInt("index", 0);
 			selectedListener.onListItemSelected(index);
