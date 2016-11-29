@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class MainActivity extends AppCompatActivity implements SampleListFragment.ListItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements SampleListFragment.OnListFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity implements SampleListFragmen
         setContentView(R.layout.activity_main);
     }
 
-    public void onListItemSelected(int index) {
+    public void onListFragmentInteraction(int index) {
         SampleViewerFragment imageViewer = (SampleViewerFragment) getSupportFragmentManager().findFragmentById(R.id.image_viewer_fragment);
         imageViewer.update(index);
     }
