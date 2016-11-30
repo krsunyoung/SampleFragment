@@ -13,6 +13,7 @@ public class SampleListFragment extends ListFragment {
 	private int index = 0;
 	private OnListFragmentInteractionListener mListener;
 
+	@Override
 	public void onListItemClick(ListView l, View v, int position, long id) {
 		index = position;
 		mListener.onListFragmentInteraction(position);

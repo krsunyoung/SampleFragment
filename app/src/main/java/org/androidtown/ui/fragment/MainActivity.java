@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity implements SampleListFragmen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
     public void onListFragmentInteraction(int index) {
         SampleViewerFragment imageViewer = (SampleViewerFragment) getSupportFragmentManager().findFragmentById(R.id.image_viewer_fragment);
         imageViewer.update(index);
